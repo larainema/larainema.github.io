@@ -1,0 +1,108 @@
+<p>This August, I transferred to a new team as an upstream contributor on the OpenStack Infrastructure team. I started my new journal in the OpenStack world, I have been focusing on the jenkins-job-builder, OpenStack CI and OpenStack QA projects. I had my first OpenStack patch merged on August 11, 2015, I would like to write and share my experience about contribute to OpenStack projects.</p>
+
+<ul>
+  <li><strong>What to contribute?</strong>                                                                                            </li>
+</ul>
+
+<p>My first patch is a bug fix for openstack documentation, documentation is the easiest start for the first patch, also you can ask for help from your colleagues to find out where to contribute, If you don’t have a buddy to make recommendations, just pop into the #openstack-infra #openstack-qa and #openstack-doc channel in IRC and just ask for suggestions.</p>
+
+<ul>
+  <li>
+    <p><strong>Setup your dev</strong> <strong>environment</strong>                                                                OpenStack has done an excellent job of documenting the <a href="http://docs.openstack.org/infra/manual/developers.html#getting-started">steps for new developers</a> and I recommend following those instructions.</p>
+  </li>
+  <li>
+    <ol>
+      <li>
+        <p>Account Setup                                                                                   First, You’ll need a <a href="https://launchpad.net/+login">Launchpad account</a>, since this is how the Web interface for the Gerrit Code Review system will identify you. Also to contribute to any OpenStack project, you’ll need to create a community account and sign the agreement. Make sure the email you provide for your OpenStack email address matches your Ubuntu Single Sign On email address! Also make sure to <a href="https://review.openstack.org/#/settings/contact">update your contact information</a> on Gerrit.You’ll also want to <a href="https://review.openstack.org/#/settings/ssh-keys">upload an SSH key to Gerrit at review.openstack.org</a> while you’re at it, so that you’ll be able to commit changes for review later. This is different from adding a key to Launchpad. Ensure that you have run these steps to let git know about your email address:</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git config --global user.name "Firstname Lastname"
+   git config --global user.email "your_email@youremail.com"
+   git config --global http.proxy http://web-proxy.cce.hp.com:8088 (optional for env under firewall)
+   git config --global https.proxy http://web-proxy.cce.hp.com:8088 (optional for env under firewall)
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Install git-review</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> apt-get install git-review
+ git config --global gitreview.scheme https
+ git config --global gitreview.port 443
+ git config --global gitreview.username yourgerritusername
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Working on a projectClone a repository in the usual way, for example:</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://git.openstack.org/openstack/&lt;projectname&gt;.git
+ debug: nc review.openstack.org 29418
+ debug: ssh -p 29418 larainema@review.openstack.org gerrit version
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>If you didn’t work under the Great China firewall, the envroument will works, but the port 29418 is blocked by the firewall, so ssh didn’t work in China, you need to access Gerrit by HTTPS.Keep in mind that you will need to generate an <a href="https://review.openstack.org/#/settings/http-password">HTTP password in Gerrit</a> to use this connection. You should run the following command before “git review -s”:</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git remote add gerrit https://&lt;username&gt;:&lt;password&gt;@review.openstack.org/&lt;umbrella repository name&gt;/&lt;repository name&gt;.git
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>Obtain commit-msg</p>
+
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ scp -p -P 29418 &lt;your username&gt;@&lt;your Gerrit review server&gt;:hooks/commit-msg &lt;local path to your git&gt;/.git/hooks/ 
+ $ curl -Lo &lt;local path to your git&gt;/.git/hooks/commit-msg &lt;your Gerrit http URL&gt;/tools/hooks/commit-msg
+</code></pre></div>        </div>
+      </li>
+      <li>
+        <p>In general you should be using a local Python rather than a system Python. You know if you’re using system Python if you have to type “sudo” anytime you want to do anything beyond running a program (like pip). Virtualenv makes doing this really easy. My colleagoue have a great blog about <a href="https://rbtcollins.wordpress.com/2015/07/12/bootstrapping-developer-environments-for-openstack/">how to use virtualenv</a></p>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<p> </p>
+
+<ul>
+  <li><strong>Run the tests</strong>                                                                                                      Once you’ve cloned the git repository, follow the instructions in the README at the parent level to do any necessary local setup. It will likely involve installing a bunch of python dependencies. See the section above for my recommendation involving using virtualenv for this.After configuring and installing, before touching anything else, I highly recommend running the tests to make sure everything works on your system. It’s incredibly hard to troubleshoot when you’re not sure if your patch broke something or if it was a setup issue that’s causing test failures. To run the tests you’ll need to set up tox if you haven’t already. It’s really straightforward (pip install tox), see the <a href="http://docs.openstack.org/infra/manual/python.html">OpenStack Python Developer Docs</a> if you’re not sure how.</li>
+</ul>
+
+<p> </p>
+
+<ul>
+  <li><strong>Make the changes</strong></li>
+  <li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git checkout -b TOPIC-BRANCH
+  git commit -a
+  git review
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><a href="https://wiki.openstack.org/wiki/GitCommitMessages">Git commit messages</a> should start with a short 50 character or less summary in a single paragraph. The following paragraph(s) should explain the change in more detail.</p>
+
+<ul>
+  <li><strong>Update the changes</strong></li>
+  <li>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git commit -a --amend
+  git review
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Get your patch reviewed</strong>                                                                                          Once the test have passed, you’ll need to get your change accepted by 2 core members in order to get it merged. If your patch has been reviewed and says “Needs Workflow” it means another core needs to approve it before it can be merged. To find out who the core members are that can +2 or approve your patch, visit the project’s page in review.openstack.org. Click on “Access” at the top of the screen and then click on any of the project-core links to see a list of people. You can add names as Reviewers to your change from your change’s url or you can ask in #openstack-infra if those individuals could review your change. Once your patch has been approved, it will be automatically merged!</li>
+</ul>
+
+<p> </p>
+
+<ul>
+  <li>You can watch your progress as an OpenStack contributor at <a href="http://www.stackalytics.com/">Stackalytics</a>!</li>
+</ul>
+
+<p> </p>
+
+<h3 id="useful-links">Useful Links</h3>
+
+<ul>
+  <li>OpenStack Developers’ Guide –<a href="http://docs.openstack.org/infra/manual/developers.html">http://docs.openstack.org/infra/manual/developers.html</a></li>
+  <li>Virtualenv – <a href="https://virtualenv.pypa.io/en/latest/">https://virtualenv.pypa.io/en/latest/</a></li>
+  <li>DevStack – <a href="http://docs.openstack.org/developer/devstack/">http://docs.openstack.org/developer/devstack/</a></li>
+  <li>OpenStack Python Developers’ Guide –<a href="http://docs.openstack.org/infra/manual/python.html">http://docs.openstack.org/infra/manual/python.html</a></li>
+  <li>Git Commit Messages – <a href="https://wiki.openstack.org/wiki/GitCommitMessages">https://wiki.openstack.org/wiki/GitCommitMessages</a></li>
+  <li>Stackalytics – <a href="http://www.stackalytics.com/">http://www.stackalytics.com</a></li>
+</ul>

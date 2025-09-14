@@ -1,30 +1,541 @@
----
-layout: null
----
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
-      <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
-      </item>
-    {% endfor %}
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-09-14T19:11:28+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/09/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-09-14T19:02:50+08:00</published><updated>2025-09-14T19:02:50+08:00</updated><id>http://localhost:4000/jekyll/update/2025/09/14/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/09/14/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>Jekyll requires blog post files to be named according to the following format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">2016.7.12 ~ 7.19 日本东京京都大阪旅游</title><link href="http://localhost:4000/family/travel/2016/07/20/2016-7-12-7-19-%E6%97%A5%E6%9C%AC%E4%B8%9C%E4%BA%AC%E4%BA%AC%E9%83%BD%E5%A4%A7%E9%98%AA%E6%97%85%E6%B8%B8.html" rel="alternate" type="text/html" title="2016.7.12 ~ 7.19 日本东京京都大阪旅游" /><published>2016-07-20T00:00:00+08:00</published><updated>2016-07-20T00:00:00+08:00</updated><id>http://localhost:4000/family/travel/2016/07/20/2016-7-12-7-19-%E6%97%A5%E6%9C%AC%E4%B8%9C%E4%BA%AC%E4%BA%AC%E9%83%BD%E5%A4%A7%E9%98%AA%E6%97%85%E6%B8%B8</id><content type="html" xml:base="http://localhost:4000/family/travel/2016/07/20/2016-7-12-7-19-%E6%97%A5%E6%9C%AC%E4%B8%9C%E4%BA%AC%E4%BA%AC%E9%83%BD%E5%A4%A7%E9%98%AA%E6%97%85%E6%B8%B8.html"><![CDATA[<p>2016年第四站， 参加Linux conf Japan, 第二次日本之旅，东京京都大阪。</p>
+
+<ul>
+  <li>2016.7.12 NH964 8:30 Beijing T3 ~ 12:55 Tokyo Haneda Apt T1 (4000CNY)</li>
+  <li>2016.7.12~7.15 Hotel Chinzanso Tokyo 110096 JPY</li>
+  <li>2016.7.16 Kyoto Yoko and Akira Guesthouse 26000 JPY</li>
+  <li>2016.7.17~7.18 Hilton Osaka 56899.78 JPY</li>
+  <li>2016.7.19 NH979 10:00 Osaka Kansai Apt T1 ~ 12:15 Beijing T3</li>
+</ul>
+
+<p><strong>2016.7.12 出发</strong></p>
+
+<p>这次日本之行选择了全日航空, 而且去程免费升级成了商务舱, 第一次升级为商务舱, 不过娃和娃妈还是挤在经济舱, 本来想让娃坐在商务舱, 结果空姐不让…, 飞机还delay了两个多小时.</p>
+
+<p>飞行的时间不长,顺利抵达,第二次到达了羽田机场, 西瓜卡充值可以继续用, 东京单轨电车到滨松町，换乘JR线到有乐町，换乘有乐町线到江户川桥站，然后爬上一个很陡的斜坡到达酒店</p>
+
+<p>酒店不错，据说正常价格500美金一晚， 酒店安顿好了之后出门找吃的，结果走了半天也没找到吃的， 胖子还睡着了，于是娃妈带娃回酒店，我继续找吃的，走了不远买到了盒饭</p>
+
+<p>晚上地铁到池袋买尿裤，走回酒店</p>
+
+<p><strong>2016.7.13 开会</strong></p>
+
+<p>一早出发去会场注册，speaker还给发了瓶酒当礼物，见到了同事，上午是keynote，中午和同事一起吃了顿日餐，下午参加了同事的session。会议结束地铁去找娃妈， 娃妈今天带娃去了AKACHAN錦糸町店shopping。晚餐这里解决的</p>
+
+<p><strong>2016.7.14 开会</strong></p>
+
+<p>上午开会，有幸和linus照了张像，完成了我的topic，表现还可以。午餐吃的会议餐，娃们吃的牛肉饭，在酒店花园玩，下午陪小的酒店睡觉，娃妈带娃去的池袋逛商场。</p>
+
+<p>晚餐和同事还有NEC的朋友一起吃饭</p>
+
+<p><strong>2016.7.15 逛街</strong></p>
+
+<p>娃妈逛商场，陪娃在商场里面玩，吃的拉面</p>
+
+<p><strong>2016.7.16 去京都</strong></p>
+
+<p>酒店吃了一顿日式早餐，收拾东西，打车去东京站，新干线去京都。</p>
+
+<p>新干线很快，到达京都转地铁去二条，然后walk去booking订的酒店，非常小的房间但是样样俱全，酒店老板很热情</p>
+
+<p>收拾好了，去京都站和闺女幼儿园同学一起聚会吃饭，在东京站一起玩</p>
+
+<p><strong>2016.7.17 京都大阪</strong></p>
+
+<p>早上行李打包, 把行李留在酒店, 和房东一家合影, 出发准备去二条城, 半路碰到一日本人说今天是日本节日有游行, 于是凑热闹去看游行, 结果人具多, 就看了一眼就走了.</p>
+
+<p>然后逛二条城, 逛完后吃饭, 送娃妈和娃去京都站附近的商场买东西, 我走回酒店取行李, 然后京都站集合坐车去大阪.</p>
+
+<p>大阪放下行李, 吃咖喱饭, 回酒店</p>
+
+<p><strong>2016.7.18 大阪</strong></p>
+
+<p>满满有点儿发烧, 留在酒店休息, 带瑶瑶去大阪的水族馆, 坐摩天轮, 接触小动物, 中间做错的地铁两次. 晚上超市买零食吃</p>
+
+<p><strong>2016.7.19 大阪回北京</strong></p>
+
+<p>一早酒店早餐后坐大巴去有名的关西机场, 回北京</p>]]></content><author><name></name></author><category term="family" /><category term="travel" /><summary type="html"><![CDATA[2016年第四站， 参加Linux conf Japan, 第二次日本之旅，东京京都大阪。]]></summary></entry><entry><title type="html">Linux Conf Japan 2016 in Tokyo</title><link href="http://localhost:4000/travel/2016/07/19/linux-conf-japan-2016-in-tokyo.html" rel="alternate" type="text/html" title="Linux Conf Japan 2016 in Tokyo" /><published>2016-07-19T00:00:00+08:00</published><updated>2016-07-19T00:00:00+08:00</updated><id>http://localhost:4000/travel/2016/07/19/linux-conf-japan-2016-in-tokyo</id><content type="html" xml:base="http://localhost:4000/travel/2016/07/19/linux-conf-japan-2016-in-tokyo.html"><![CDATA[<p>This year I have submitted a topic to the Linux conf japan, and this talk have been accepted by the conference, so I made my second trip for Tokyo. This year’s Linux conf japan took place at the hotel chinzanso a very beautiful garden hotel in Tokyo.</p>
+
+<p>I arrived Tokyo on the Tuesday July 12th, i am very happy my flight upgrade to the business class by free, so that make me more relax on the flight. After arrived I toke the train and subway to the hotel, and with the long walk/climb to the hotel, picture took at the hotel room.</p>
+
+<p><img src="images/iphone6Sd_20160730-032-300x225.jpg" alt="iphone6Sd_20160730 032" /></p>
+
+<p>Conference began on Wednesday July 13th, and I got my conf badge and speaker gift with a long queue in the morning. Conference started with the keynote by Jim Zemlin, Executive Director at the Linux Foundation and a bunch of keynotes in the morning.</p>
+
+<p><img src="images/iphone6Sd_20160730-047-225x300.jpg" alt="iphone6Sd_20160730 047" /></p>
+
+<p><img src="images/iphone6Sd_20160730-048-300x225.jpg" alt="iphone6Sd_20160730 048" /></p>
+
+<p>Have great lunch with my colleges Matthew and Masayukig and join their session in the afternoon to talk about the Best Testing through statistics, This talk explain the basics of OpenStack’s CI infra and cover the approach and tooling used by the OpenStack community to interact with the large amount of test result. It explain the techniques used and the benefits derived from having both open test result data and performing analysis on that data to understand the project.</p>
+
+<p><img src="images/iphone6Sd_20160730-062-300x225.jpg" alt="iphone6Sd_20160730 062" /></p>
+
+<p>The second day I enjoyed the keynote conversion session between Linus Torvalds the Linux creator and Dirk Hohndel the chief open source officer of VMware to talk about the Linux. What more exciting for me is I took a picture with Linus after the keynote. Yeah!</p>
+
+<p><img src="images/iphone6Sd_20160730-076-300x225.jpg" alt="iphone6Sd_20160730 076" /></p>
+
+<p>This afternoon, I gave a talk this afternoon to talk about the continuous integration and continuous delivery of open source project. This is my first time to talk at Linux conf japan and got a good feedback about my session. Also this night I have a great dinner with the NEC guys and OpenStack colleges.</p>
+
+<p>The third day is the close day of Linux conf japan, it’s great honor to join and talk at Linux conf japan, met many good friends here, I hope I can join in the next year!</p>]]></content><author><name></name></author><category term="travel" /><summary type="html"><![CDATA[This year I have submitted a topic to the Linux conf japan, and this talk have been accepted by the conference, so I made my second trip for Tokyo. This year’s Linux conf japan took place at the hotel chinzanso a very beautiful garden hotel in Tokyo.]]></summary></entry><entry><title type="html">2016.4.23 ~ 5.4 美国奥斯汀OpenStack Summit</title><link href="http://localhost:4000/openstack/travel/2016/06/11/2016-4-23-5-4-%E7%BE%8E%E5%9B%BD%E5%A5%A5%E6%96%AF%E6%B1%80openstack-summit.html" rel="alternate" type="text/html" title="2016.4.23 ~ 5.4 美国奥斯汀OpenStack Summit" /><published>2016-06-11T00:00:00+08:00</published><updated>2016-06-11T00:00:00+08:00</updated><id>http://localhost:4000/openstack/travel/2016/06/11/2016-4-23-5-4-%E7%BE%8E%E5%9B%BD%E5%A5%A5%E6%96%AF%E6%B1%80openstack-summit</id><content type="html" xml:base="http://localhost:4000/openstack/travel/2016/06/11/2016-4-23-5-4-%E7%BE%8E%E5%9B%BD%E5%A5%A5%E6%96%AF%E6%B1%80openstack-summit.html"><![CDATA[<p>2016年第三站，自费美国奥斯汀OpenStack Summit。</p>
+
+<ul>
+  <li>2016.4.23 UA088 15:45 PEK ~ 17:25 EWR-NEWARK LIBERTY (5126)</li>
+  <li>2016.4.24 UA1162 7:30 EWR ~ 10:47 AUS-AUSTIN BERGSTORM (2901)</li>
+  <li>2016.4.30 UA 3330 11:56 AUS ~ 16:49 EWR</li>
+  <li>2016.4.29 EMBASSY SUITES AUSTIN CENTRAL (149.65 USD)</li>
+  <li>2016.5.3 UA4931 6:01 EWR ~ 7:34 IAD-DULLES</li>
+  <li>2016.5.3 UA807 12:40 IAD ~ 5.4 14:40 PEK</li>
+</ul>
+
+<p><strong>2016.4.23 出发</strong></p>
+
+<p>下午出发, 飞纽约, 到达纽约地铁进了趟城, 中央车站, 帝国大厦, 时代广场拖着皮箱溜了一圈, 回机场, 夜宿机场沙发</p>
+
+<p><strong>2016.4.24 奥斯汀</strong></p>
+
+<p>纽约一早飞奥斯汀, 11点抵达, bus到downtown, 走到holiday inn, 放下行李, 去了会场时间没到check in, 去河边溜达了一圈, 又去参观了州厅, 回去签到, 和dan吃晚餐, 买甜甜圈, 睡觉</p>
+
+<p><strong>2016.4.25 Summit</strong></p>
+
+<p>keynote, session, market place happy hour</p>
+
+<p><strong>2016.4.26 Summit</strong></p>
+
+<p>keynote, session, 酒会, 晚餐</p>
+
+<p><strong>2016.4.27 Summit</strong></p>
+
+<p>Design Summit, core dinner, 夜景</p>
+
+<p><strong>2016.4.28 Summit</strong></p>
+
+<p>Session, 1x1 with Vicky, 公交车去逛outlets</p>
+
+<p><strong>2016.4.29 Summit</strong></p>
+
+<p>中午撤了, 公交车去outlets旁边酒店, 继续逛</p>
+
+<p><strong>2016.4.30 奥斯汀到纽约</strong></p>
+
+<p>温同学接我们, 请吃了一顿川菜</p>
+
+<p><strong>2016.5.1 纽约</strong></p>
+
+<p>下雨, 逛华尔街, 铜牛, 世贸中心遗址, 自由女神, 中央公园, 歌剧没听上, 80多街走到了32街, 韩国料理, 着火, 熨斗大厦, 纽约大学</p>
+
+<p><strong>2016.5.2 纽约</strong></p>
+
+<p>纽约奥特莱斯, 买鞋, 最好吃汉堡, 温同学送去机场</p>
+
+<p><strong>2016.5.3 回家</strong></p>
+
+<p>逛了一下华盛顿机场</p>]]></content><author><name></name></author><category term="openstack" /><category term="travel" /><summary type="html"><![CDATA[2016年第三站，自费美国奥斯汀OpenStack Summit。]]></summary></entry><entry><title type="html">Highlights of Newton OpenStack Summit Austin</title><link href="http://localhost:4000/openstack/travel/2016/06/02/highlights-of-newton-openstack-summit-austin.html" rel="alternate" type="text/html" title="Highlights of Newton OpenStack Summit Austin" /><published>2016-06-02T00:00:00+08:00</published><updated>2016-06-02T00:00:00+08:00</updated><id>http://localhost:4000/openstack/travel/2016/06/02/highlights-of-newton-openstack-summit-austin</id><content type="html" xml:base="http://localhost:4000/openstack/travel/2016/06/02/highlights-of-newton-openstack-summit-austin.html"><![CDATA[<p><strong>Day 0</strong></p>
+
+<p>It’s been a long time to write this post after the Austin OpenStack Summit, but I hope to keep all memories of this trip.  It’s my third OpenStack Summit, this time the Summit happened at Austin Texas on April 25 to April 29, 2016 . This is my second time been to the US and first time been to Austin Texas.</p>
+
+<p>I arrived Austin at Sunday (April 24) afternoon, dropped my bags at hotel and went to the convention center to pick up my badge and T-shirt before many people come in the Monday morning. Met my colleague Craige at  the convention center.</p>
+
+<p>My third OpenStack Summit badge</p>
+
+<p><img src="images/iphone6Sd_20160515-296-225x300.jpg" alt="iphone6Sd_20160515 296" /></p>
+
+<p>Then I got a time taking a quick tourist of Austin around the convention center, walk at the Colorado riverside and visit the Capital of Texas State.</p>
+
+<p><img src="images/iphone6Sd_20160515-209-300x94.jpg" alt="riverside" /><img src="images/iphone6Sd_20160515-249-225x300.jpg" alt="iphone6Sd_20160515 249" /></p>
+
+<p>I am very happen to meet my old colleague Dan and have dinner with him at the iron cactus mexican restaurant, try grill and margarita.</p>
+
+<p><img src="images/iphone6Sd_20160515-317-225x300.jpg" alt="iphone6Sd_20160515 317" /> <img src="images/iphone6Sd_20160515-316-225x300.jpg" alt="iphone6Sd_20160515 316" /></p>
+
+<p><strong>Day 1</strong></p>
+
+<p>The first day began with the live music from the band <a href="http://www.soultrackmind.com/">Soul Track Mind</a>. This is first time OpenStack Summit start with the live music show, it’s fun.</p>
+
+<p><img src="images/iphone6Sd_20160515-322-300x225.jpg" alt="iphone6Sd_20160515 322" /></p>
+
+<p>Jonathan Bryce, Todd Morey and Lauren Sell of the OpenStack Foundation opened the conference and gave a tour of numbers. The first OpenStack summit was held in Austin just under six years ago with 75 people and they were proud to announce that this summit had over 7,500 people registered. In Jonathan’s keynote we were able to get into the real users of OpenStack, with highlights including the fact that 65% of respondents to the recent OpenStack User Survey are using OpenStack in production and that half of the Fortune 100 companies are using OpenStack. The video from his keynote is here: <a href="https://www.youtube.com/watch?v=d1n4qf1bN7g">Embracing Datacenter Diversity</a>.</p>
+
+<p>The first day keynote session by AT&amp;T, Mirants, SAP, Redhat and Volkswagen Group. The most interested for me is from Volkswagen Group(<a href="https://www.youtube.com/watch?v=HL_pzkDnal4">Driving the Future of IT Infrastructure at Volkswagen Group</a>). Also announced the superuser awards to AT&amp;T, the keynote sessions concluded with the announcement of the 2017 OpenStack Summit locations: Boston and Sydney!</p>
+
+<p>After the keynote sessions, I joined the session of OpenStack-Health Dashboard and Dealing with Data from the Gate by Matthew Treinish, he talked about the openstack-health dashboard, how it works, it’s current limitations, and the future of the project. It’ll also cover some related tools that are available and how they all fit together, and how you can use everything together to take a more data driven approach to analyze and test OpenStack with the gate.</p>
+
+<p><img src="images/iphone6Sd_20160515-370-300x225.jpg" alt="iphone6Sd_20160515 370" /></p>
+
+<p>After lunch, I went to the talk “OpenStack Stable: What It Actually Means to Maintain Stable Branches” by Matt Riedemann, Matthew Treinish and Ihar Hrachyshka in the Upstream Development track of the conference. The goal of this talk was to inform members of the community what exactly is involved in management of stable releases, which has a lot more moving pieces than most people tend to expect. Video from the session up <a href="https://www.youtube.com/watch?v=2agiBu081sw">here</a>.  Next is “OpenAPI as a Standard – A New Way Forward for API Documentation, Design and Tool” by Ken’ichi Ohmichi, Motohiro Otsuka, Anne Gentle and Alex Xu, this talk provides the overview of Swagger, how to apply Swagger to each project, and merit for clients. Video of this session <a href="https://youtu.be/10VoLqOlFsU">here</a>.</p>
+
+<p>Next I joined is “<a href="https://youtu.be/fXXH-DWf03A">Hunting for Purple Squirrels: Hiring OpenStack Contributors in the Wild</a>” by Colette Alexander, She talked about the tips and tricks for screening and interviewing so you can get the best candidates for your team. She also talked about the traits and skills that are the best indicators for success for someone new to the OpenStack community, and what red flags to watch out for in interviews. The hiring process is daunting, but you’ll leave this talk re-charged and ready to go find some purple squirrels!</p>
+
+<p> </p>
+
+<p>The last session joined in a series of great Lightning Talks. Elizabeth K. Joseph gave a tour of <a href="http://status.openstack.org/">status.openstack.org</a>. Continued with talks by Paul Belanger on <a href="http://docs.openstack.org/infra/grafyaml/">Grafyaml</a>, James E. Blair on <a href="https://git.openstack.org/cgit/openstack/gertty/tree/README.rst">Gertty</a> and Andreas Jaeger on the steps for <a href="http://docs.openstack.org/infra/manual/creators.html">adding a project</a> to OpenStack. Video of all the lightning talks <a href="https://www.youtube.com/watch?v=JUUrAv9vSb0">here</a>.</p>
+
+<p>The last part today is the happy hour at the Market place, food, beer and music, visit sponsor’s booth for T-shirt and gifts.</p>
+
+<p><img src="images/iphone6Sd_20160515-390-225x300.jpg" alt="iphone6Sd_20160515 390" /></p>
+
+<p><strong>Day 2</strong> </p>
+
+<p>Day two of the summit also began with live music. Mark Collier of the OpenStack Foundation kicked off by talking about to manage the increased  billions of devices infrastructure, new tools and patterns will be required which can handle bare metal, virtual machines, and containers, The opportunity is massive, but it will require collaboration across many open source communities, always mindful of what our users want and need, because it’s collaborate or die in the billion device, billion core era. video<a href="https://www.youtube.com/watch?v=s-k-RenOczU">here</a>.</p>
+
+<p><img src="images/iphone6Sd_20160515-393-300x225.jpg" alt="iphone6Sd_20160515 393" /></p>
+
+<p>The highlights of the keynotes today included a talk about Building a SmartCity with IoT. Video of the presentation <a href="https://www.youtube.com/watch?v=Ym_CZ8-crD8">here</a>. Improving user experience(UX) with OpenStackClient by Dean Troyer, The video from the talk is <a href="https://www.youtube.com/watch?v=5MbLKxqDvsA">here</a>. And OVH presented its high-performance and large-scale OpenStack-based cloud that efficiently combines dedicated and shared resources. And also Lew Tucker, Cisco’s CTO of Cloud Computing, will address Cisco’s continued commitment to OpenStack and discuss how the technology is evolving to usher in a new era of developer-driven, software-defined applications and services.</p>
+
+<p>After these keynote sessions, I began my first Design Summit sessions. Tuesday is for the cross-project sessions.</p>
+
+<p><img src="images/ods-n_design_summit_sign-225x300.jpg" alt="ods-n_design_summit_sign" /></p>
+
+<p>I joined following cross-project sessions:</p>
+
+<ul>
+  <li>Cross Project workshops: Deployment tools discussion</li>
+  <li>How to improve the situation around global requirements</li>
+  <li>Stable Branch End of Life Policy</li>
+  <li>The future of baremetal networking</li>
+</ul>
+
+<p>There is another session related split event I didn’t join, copy the content from my colleague’s blog post:</p>
+
+<p><em>“Brainstorm format for design summit split event” session that talked a lot about dates. As a starting point, Thierry Carrez wrote a couple blog posts about the proposal to split the design summit from the user summit:</em></p>
+
+<ul>
+  <li><em><a href="http://ttx.re/splitting-out-design-summit.html">Splitting out the OpenStack Design Summit</a></em></li>
+  <li><em><a href="http://ttx.re/how-splitting-enhances-dev-process.html">How splitting the Design Summit enhances the development process</a></em></li>
+</ul>
+
+<p><em>With these insightful blog posts in mind, the discussion moved forward on the assumption that the events would be split and how to handle that timing-wise. When in the cycle would each event happen for maximum benefit for our entire community? In the first blog post he had a graphic that had a proposed timeline, which the discussions mostly stuck to, but dove deeper into discussing what is going on during each release cycle week and what the best time would be for developers to gather together to start planning the next release. While there was good discussion on the topic, it was clear that there continues to be apprehension around travel for some contributors. There are fears that they would struggle to attend multiple events funding-wise, especially when questions arose around whether mid-cycle events would still be needed. Change is tough, but I’m on board with the plan to split out these events.</em> </p>
+
+<p>Tuesday’s evening I joined the StackCity Community Party.  Instead of individual companies throwing big, expensive parties, a street was rented out and companies were able to sponsor the bars and eateries in order to throw their branded events in them. But I didn’t get any thing to eat as most of the party is beer, I stay here about 1 hours and went with my colleague for another delicious dinner.</p>
+
+<p><img src="images/iphone6Sd_20160515-416-225x300.jpg" alt="iphone6Sd_20160515 416" />      <img src="images/iphone6Sd_20160515-420-225x300.jpg" alt="iphone6Sd_20160515 420" /></p>
+
+<p> </p>
+
+<p><strong>Day 3</strong></p>
+
+<p>Design Summit day of Infrastructure and QA</p>
+
+<p><img src="images/ods-n_design_summit_sign-225x300.jpg" alt="ods-n_design_summit_sign" /></p>
+
+<p>All the Wednesday, I joined the Design Summit of Infrastructure and QA sessions. Today’s first session was discussing the Community Task Tracking. A status update on Storyboard and Maniphest, and the road ahead for OpenStack community task, bug and incident tracking. Copied of the pros and cons of Storyboard and Maniphest:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><strong>Pros</strong></th>
+      <th><strong>Cons</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Storyboard</strong></td>
+      <td>Strong influence over direction, already running and being used in our infra, good API</td>
+      <td>We need to invest in development ourselves, little support for design/UI folks (though we could run a standalone Pholio)</td>
+    </tr>
+    <tr>
+      <td><strong>Maniphest</strong></td>
+      <td>Investment is made by a large exiting development team, feature rich with pluggable components like Pholio for design folks</td>
+      <td>Little influence over direction (like with Gerrit), still have to stand up and migrate to, weak API</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The session didn’t end with any selection, Session etherpad <a href="https://etherpad.openstack.org/p/r.46d96ace0361ead94e56d9fe181c5802">here</a>.</p>
+
+<p>Next session I joined was the QA track about the devstack roadmap, Quick update on the progress of the Neutron refactor, discuss some of the issues discovered while doing the refactor, and plans to finish the refactor. Session etherpad <a href="https://etherpad.openstack.org/p/r.06a005b7497d8ad3d837fb80f68cf1e6">here</a>.</p>
+
+<p>Next one also the QA track about How to accelerate to apply tempest.lib to each project? What’s necessary for a tempest plugin? Etherpad: <a href="https://etherpad.openstack.org/p/newton-qa-tempest-lib-and-tempest-plugin">here</a></p>
+
+<p>The last one in the morning was Infrastructure: Landing Page for Contributors. The current pages were on the wiki, like the <a href="https://wiki.openstack.org/wiki/Main_Page">Main page</a> and the <a href="https://wiki.openstack.org/wiki/How_To_Contribute">How To Contribute wiki</a> aren’t the most welcoming of pages. This session talked through a lot of the tooling that could be used to make a more inviting, approachable page. Session etherpad <a href="https://etherpad.openstack.org/p/r.7c398b6a12472afa0bda754f279f29ea">here</a>.</p>
+
+<p>In the afternoon, I just joined one QA session about OpenStack Health lead by Matthew Treinish, to discuss the current needs for the project and how to address outstanding issues like bringing in check queue data, how to handle DB scaling, etc. Session etherpad <a href="https://etherpad.openstack.org/p/newton-qa-openstack-health">here</a></p>
+
+<p>After that I have a great conversion and coffee with Vicky (Our US team manager), talked about the team status, work, presentation, Vicky suggested a great idea about present at LCA 2017 about Open Source projects contributions for none english native person.</p>
+
+<p>Today’s evening I had a chance to join the core reviewers dinner sponsored by HPE each summit as the greeting  guys with my boss Allison. The dinner was at the very beautiful place and had chance to talk with many core reviewers.</p>
+
+<p><img src="images/iphone6Sd_20160515-435-300x225.jpg" alt="iphone6Sd_20160515 435" /><img src="images/iphone6Sd_20160515-441-300x225.jpg" alt="iphone6Sd_20160515 441" /></p>
+
+<p>Conclude today with Austin’s beautiful night view</p>
+
+<p><img src="images/iphone6Sd_20160515-450-300x225.jpg" alt="iphone6Sd_20160515 450" /></p>
+
+<p> </p>
+
+<p><strong>Day 4</strong></p>
+
+<p>Started in Thursday, I joined a session about “Application CI/CD on OpenStack – Building a Solution Using Jenkins and OpenStack Solum”, Continuous integration and continuous delivery are important aspects in today’s agile and iterative application development methods. Systems such as Jenkins have become pillars of the continuous integration movement providing a general framework to run application-specific tests. On the other hand, continuous delivery has always remained as a challenge. This is especially true if the deployment target is an OpenStack environment which involves several moving parts. In this talk we will present a CI/CD solution that we have built using Jenkins for CI and OpenStack Solum for CD for testing and deploying applications to OpenStack clouds.</p>
+
+<p><img src="images/iphone6Sd_20160515-466-300x225.jpg" alt="iphone6Sd_20160515 466" /></p>
+
+<p>Then back to the Design Summit for Infrastructure was a fishbowl session about OpenID/SSO for Community Systems. The OpenStack Foundation invested in the development of OpenStackID when few other options that fit our need were mature in this space. Today we have the option of using <a href="https://fedorahosted.org/ipsilon/">ipsilon</a>, which has a bigger development community and is already in use by another major open source project (Fedora). The session outlined the benefits of consuming an upstream tool instead, including their development model, security considerations and general resources that have been spent to roll our own solution. The session also outlined exactly what our needs are to move all of our authentication away from Launchpad hosted by Canonical. Session etherpad <a href="https://etherpad.openstack.org/p/r.2d4344187e0d3d899fd4912bb03625ac">here</a>.</p>
+
+<p>Next session was QA: DefCore and Interoperability Testing, The DefCore Working Group is formalizing the requirements for what an interoperable test is. With the successful history of collaboration between the QA and DefCore teams, this working session is targeted towards building that relationship and planning for working on short and long term test issues. This includes identifying work items for currently flagged tests, planning for the refactoring of existing tests to meet DefCore test requirements (including removing unnecessary admin privileges where possible), and long term planning for the augmentation of existing tests and creation of new tests for verifying cloud interoperability.”</p>
+
+<p>The last one I joined today was QA: Newton cycle priorities, this session is to discuss, evaluate, and agree up the list of work item priorities for the Newton cycle. Etherpad: <a href="https://etherpad.openstack.org/p/newton-qa-newton-priorities">here</a></p>
+
+<p> </p>
+
+<p><strong>Day 5</strong></p>
+
+<p>The last day was the day for team work session gatherings. Jeremy Stanley (fungi) kicked the day off by outlining topics for Infra and QA that we may find valuable to work on together while we were in the room.</p>
+
+<p><a href="https://etherpad.openstack.org/p/infra-newton-summit-planning">Infra etherpad</a> and <a href="https://etherpad.openstack.org/p/newton-qa-contributors-meetup">QA etherpad</a></p>
+
+<p><img src="images/ods-n_infra_work_day.jpg" alt="" /></p>
+
+<p>I also got chance to meet with the jenkins-job-builder cores Wayne, Thanh and Khai, to talk about the jjb planning and jjb-2.0. Also in Austin Summit, I first time to meet Jeblair and Monty.</p>
+
+<p>I concluded my Austin Summit with the special bar in Austin airport.</p>
+
+<p><img src="images/iphone6Sd_20160515-571-225x300.jpg" alt="iphone6Sd_20160515 571" /></p>
+
+<p><strong>NOTE</strong>: Infrastructure PTL Jeremy Stanley has also written summaries of sessions here:<a href="http://lists.openstack.org/pipermail/openstack-dev/2016-May/094540.html">Newton Summit Infra Sessions Recap</a></p>]]></content><author><name></name></author><category term="openstack" /><category term="travel" /><summary type="html"><![CDATA[Day 0]]></summary></entry><entry><title type="html">Highlights from FOSSASIA 2016 Singapore</title><link href="http://localhost:4000/travel/2016/03/28/highlights-from-fossasia-2016-singapore.html" rel="alternate" type="text/html" title="Highlights from FOSSASIA 2016 Singapore" /><published>2016-03-28T00:00:00+08:00</published><updated>2016-03-28T00:00:00+08:00</updated><id>http://localhost:4000/travel/2016/03/28/highlights-from-fossasia-2016-singapore</id><content type="html" xml:base="http://localhost:4000/travel/2016/03/28/highlights-from-fossasia-2016-singapore.html"><![CDATA[<p>From March 18th ~ March 20th, I had the pleasure of attending the FOSSASIA 2016 event, which took place in Singapore, this is my first time speaking at FOSSASIA, also my first time visit Singapore, I like the beautiful city.</p>
+
+<p><img src="images/Singapore-1024x768.jpg" alt="Singapore View" /></p>
+
+<p>FOSSASIA is the premier Free and Open Source technology organization in Asia for developers, designers, start-ups, and contributors. Projects at FOSSASIA range from open hardware, to design, graphics and software. FOSSASIA was established in 2009. The annual FOSSASIA took place in Cambodia, Vietnam and Singapore. FOSSASIA 2016 took place in Science Center Singapore.</p>
+
+<p>I arrived Singapore on March 17th midnight and my hotel located in the downtown of Singapore, the Science Center Singapore located at the West of Singapore, so i need take the train early in the morning to get to the conference venue. The conference began on March 18 morning, i spent the whole morning at the main conference opening and keynotes.</p>
+
+<p>Conference opening by Hong Phuc Dang (Chairman of FOSSASIA)</p>
+
+<p><img src="images/Grand-Opening.jpg" alt="Grand Opening" /></p>
+
+<p>Keynotes highlight on March 18 morning: A Funny Thing Happened On My Way To The Science Centre                   Harish Pillay (RedHat) UNESCO YouthMobile                                                                                  Davide Storti, ITO Misako (UNESCO) Science and Open Source Program at Google                                                  Cat Allman (Google)</p>
+
+<p>A lot of Sessions joined in day 1: Managing A Healthy GitHub Community Mike McQuaid (GitHub/Homebrew) What’s new in systemd in 2016?  Lennart Poettering (Red Hat) Going through era of IoT with MySQL 5.7  Ricky Setyawan (MySQL)</p>
+
+<p>Also visit the exhibition booth from Debian, Redhat, MySQL and Deepin, talked with many people there.</p>
+
+<p>On March 19, the conference continued with a lot of good sessions also my talk at today afternoon. In the morning, i joined two sessions: first one joined the python track of FOSSASIA, Test driven development with pytest  by Ivan Zimine (Python User Group Singapore) Dive deep into Fedora Infra  by Sayan Chowdhury (Fedora Project) Also announced the PyCon Singapore 2016 <a href="https://pycon.sg/">https://pycon.sg/</a> June 23-25</p>
+
+<p>Second session I joined is from my colleague Elizabeth Joseph talk about <a href="https://t.co/a6imVqORDJ">Code Review for DevOps</a></p>
+
+<p><img src="images/Code-Review-for-DevOps-225x300.jpg" alt="Code Review for DevOps" /></p>
+
+<p>My session is talking about the Continuous Integration and Delivery for Open Source Development, is part of the lightning talk session. This is my first time try lightning talk, not finish all slides as run out of time,but good experience to try it.</p>
+
+<p><img src="images/CI-for-Open-Source-1024x768.jpg" alt="CI for Open Source" /></p>
+
+<p>Also today we took the group photo, this photo took on each year’s FOSSASIA summit, it bring all the attendees together.</p>
+
+<figure>
+
+![FOSSASIA OpenTechSummit 2016. http://2016.fossasia.org/](images/Group-photo-1024x414.jpg)
+
+<figcaption>
+
+FOSSASIA OpenTechSummit 2016. http://2016.fossasia.org/
+
+</figcaption>
+
+</figure>
+
+<p>We also have the Speaker BBQ dinner, this event brings together all the conference speakers to socialize and network over BBQ food and beer. It was held on Saturday March 19th night, at the rooftop of Science Center Singapore. Met and talked with many speakers.</p>
+
+<p><img src="images/BBQ1-225x300.jpg" alt="BBQ1" /></p>
+
+<p><img src="images/BBQ2-225x300.jpg" alt="BBQ2" /></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p>March 20th is the final day of FOSSASIA 2016, I joined my another colleague Matthew Treinish’s talk about <a href="https://github.com/mtreinish/qa-in-the-open">QA in the Open</a></p>
+
+<p><img src="images/QA-225x300.jpg" alt="QA" /></p>
+
+<p>With that, the conference came to a close with a closing session that included thanks to everyone.</p>
+
+<p>I went to more talks than highlighted in this post, but with three days of conferencing it would have been a lot to cover. Huge thanks to all the organizers and everyone who made me feel so welcome this year. It was a wonderful presentation and conference experience and I hope to do it again next year!</p>]]></content><author><name></name></author><category term="travel" /><summary type="html"><![CDATA[From March 18th ~ March 20th, I had the pleasure of attending the FOSSASIA 2016 event, which took place in Singapore, this is my first time speaking at FOSSASIA, also my first time visit Singapore, I like the beautiful city.]]></summary></entry><entry><title type="html">2016.3.17 ~ 3.24 新加坡旅游</title><link href="http://localhost:4000/family/travel/2016/03/28/2016-3-17-3-24-%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%97%85%E6%B8%B8.html" rel="alternate" type="text/html" title="2016.3.17 ~ 3.24 新加坡旅游" /><published>2016-03-28T00:00:00+08:00</published><updated>2016-03-28T00:00:00+08:00</updated><id>http://localhost:4000/family/travel/2016/03/28/2016-3-17-3-24-%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%97%85%E6%B8%B8</id><content type="html" xml:base="http://localhost:4000/family/travel/2016/03/28/2016-3-17-3-24-%E6%96%B0%E5%8A%A0%E5%9D%A1%E6%97%85%E6%B8%B8.html"><![CDATA[<p>2016年第二站， 新加坡参加FOSSASIA，全家继续出发。</p>
+
+<ul>
+  <li>2016.3.17 SQ807 16:40 Beijing T3 ~ 23:20 Singapore Changi Apt T0 (3000 CNY)</li>
+  <li>2016.3.17 ~ 3.20 Swissotel The Stamford, Singapore (1280 SGD)</li>
+  <li>2016.3.21 ~ 3.22 Sentosa Festival hotel (633 SGD)</li>
+  <li>2016.3.23 Sentosa Hard Rock hotel (234 SGD)</li>
+  <li>2016.3.24 SQ806 16:55 Singapore T3 ~ 23:00 Beijing T3</li>
+</ul>
+
+<p><strong>2016.3.17 出发</strong></p>
+
+<p>下午的飞机, 晚上11点多到达新加坡, taxi去酒店</p>
+
+<p><strong>2016.3.18 FOSSASIA</strong></p>
+
+<p>第二天一早地铁到新加坡科技馆, 参加会议</p>
+
+<p><strong>2016.3.19 FOSSASIA</strong></p>
+
+<p>继续参加会议, 作演讲, 晚上参加会议dinner</p>
+
+<p><strong>2016.3.20 FOSSASIA</strong></p>
+
+<p>继续会议,娃们参观科技馆, 回酒店吃米线</p>
+
+<p><strong>2016.3.21 圣陶沙</strong></p>
+
+<p>退房, 地铁去圣陶沙, 走长廊, 入住节庆酒店, 海洋馆, 岛上溜达</p>
+
+<p><strong>2016.3.22 圣陶沙</strong></p>
+
+<p>圣陶沙水上世界, 亲吻海豚</p>
+
+<p><strong>2016.3.23 圣陶沙</strong></p>
+
+<p>入住hard rock酒店, 环球影城</p>
+
+<p><strong>2016.3.24 回家</strong></p>
+
+<p>大包小包, 地铁机场, 免税店</p>]]></content><author><name></name></author><category term="family" /><category term="travel" /><summary type="html"><![CDATA[2016年第二站， 新加坡参加FOSSASIA，全家继续出发。]]></summary></entry><entry><title type="html">2016.1.27 ~ 2.10 澳洲旅游</title><link href="http://localhost:4000/family/travel/2016/02/08/2016-1-27-2-10-%E6%BE%B3%E6%B4%B2%E6%97%85%E6%B8%B8.html" rel="alternate" type="text/html" title="2016.1.27 ~ 2.10 澳洲旅游" /><published>2016-02-08T00:00:00+08:00</published><updated>2016-02-08T00:00:00+08:00</updated><id>http://localhost:4000/family/travel/2016/02/08/2016-1-27-2-10-%E6%BE%B3%E6%B4%B2%E6%97%85%E6%B8%B8</id><content type="html" xml:base="http://localhost:4000/family/travel/2016/02/08/2016-1-27-2-10-%E6%BE%B3%E6%B4%B2%E6%97%85%E6%B8%B8.html"><![CDATA[<p>2016年第一站澳大利亚悉尼墨尔本， Team meetup和参加LCA2016。</p>
+
+<ul>
+  <li>1.27 CZ3116 11:30 Beijing T2 ~ 14:55 Guangzhou  (10075 CNY)</li>
+  <li>1.27 CZ325 21:00 Guangzhou ~ 1.28 9:25 Sydney Kingsford Smith Apt T1</li>
+  <li>1.28 ~ 1.30 FRASER SUITES SYDNEY (705 AUD)</li>
+  <li>1.31 QF427 11:00 Sydney T3 ~ 12:35 Melbourne Apt T1 (412 AUD)</li>
+  <li>1.31 ~ 2.5 BEST WESTERN Geelong Motor Inn (1015 AUD)</li>
+  <li>2.6 ~ 2.8 Crowne Plaza Melbourne (841.80 AUD)</li>
+  <li>2.9 CZ322 23:30 Melbourne T2 ~ 2.10 6:00 Guangzhou</li>
+  <li>2.10 CZ3099 9:00 Guangzhou ~ 12:05 Beijing T2</li>
+</ul>
+
+<p><strong>1.27 出发</strong></p>
+
+<p>上午出发, 机场早餐, 南航飞广州, 广州转机, 晚上A380飞悉尼</p>
+
+<p><strong>1.28 悉尼</strong></p>
+
+<p>早上顺利抵达悉尼, 打车到悉尼的酒店, 休息, 傍晚去情人港逛了一圈加吃饭</p>
+
+<p><strong>1.29 悉尼office</strong></p>
+
+<p>悉尼office见老板和同事, office办公一天, 娘仨悉尼歌剧院, 皇家植物园</p>
+
+<p><strong>1.30 悉尼</strong></p>
+
+<p>一早买尿裤, 澳大利亚博物馆, 圣母玛利亚教堂, 一风堂拉面</p>
+
+<p><strong>1.31 悉尼飞墨尔本</strong></p>
+
+<p>早上地铁出发机场飞墨尔本, shuttle bus从墨尔本去Geelong, LCA签到, 沿海边去酒店, 晚上同事聚餐</p>
+
+<p><strong>2.1 吉朗</strong></p>
+
+<p>参加会议, 吉朗逛商场和海边游玩</p>
+
+<p><strong>2.2 吉朗</strong></p>
+
+<p>参加会议, 逛商场, 晚上会议餐吃了袋鼠肉</p>
+
+<p><strong>2.3 吉朗</strong></p>
+
+<p>参加会议, 海边游玩, 吃了顿大餐</p>
+
+<p><strong>2.4 吉朗</strong></p>
+
+<p>参加会议, 逛商场</p>
+
+<p><strong>2.5 吉朗</strong></p>
+
+<p>参加会议, 逛聚会</p>
+
+<p><strong>2.6 吉朗去墨尔本</strong></p>
+
+<p>一早打车到火车站, 火车免费去墨尔本, 入住皇冠酒店, 逛市区target</p>
+
+<p><strong>2.7 墨尔本</strong></p>
+
+<p>墨尔本动物园, 墨尔本沙滩, 年三十春晚</p>
+
+<p><strong>2.8 墨尔本</strong></p>
+
+<p>墨尔本bay逛街购物</p>
+
+<p><strong>2.9 墨尔本</strong></p>
+
+<p>退房, 雅拉河边, 墨尔本植物园, 走了好远好远, 晚上打车机场回家</p>]]></content><author><name></name></author><category term="family" /><category term="travel" /><summary type="html"><![CDATA[2016年第一站澳大利亚悉尼墨尔本， Team meetup和参加LCA2016。]]></summary></entry><entry><title type="html">LCA 2016 in Geelong</title><link href="http://localhost:4000/travel/2016/02/08/lca-2016-in-geelong.html" rel="alternate" type="text/html" title="LCA 2016 in Geelong" /><published>2016-02-08T00:00:00+08:00</published><updated>2016-02-08T00:00:00+08:00</updated><id>http://localhost:4000/travel/2016/02/08/lca-2016-in-geelong</id><content type="html" xml:base="http://localhost:4000/travel/2016/02/08/lca-2016-in-geelong.html"><![CDATA[<p>2016.2.1 ~ 2016.2.5, i had the pleasure of attending my first linux.conf.au. This year it took place in Geelong, a very beautiful, small, seaside city, about an hour train ride southwest of Melbourne. I arrived Melbourne on Sunday(1.31) afternoon and took the shuttle bus from Melbourne airport to the conference venue at Deakin University’s Waterfront Campus, after finished the registration and got my badge, then I walked to my hotel along the very beautiful beach.</p>
+
+<p><img src="images/iphone6Sd_20160222-294-300x225.jpg" alt="iphone6Sd_20160222 294" /></p>
+
+<p>This evening I met up with a whole bunch of my HPE colleagues for dinner at this restaurant.</p>
+
+<p><img src="images/iphone6Sd_20160222-296-225x300.jpg" alt="iphone6Sd_20160222 296" /></p>
+
+<p>Conference began on Monday morning! And today I spent most of time on Open Cloud Symposium miniconf, and join the great sessions like Casey West, <a href="http://lcabythebay.org.au/schedule/30297/view_talk?day=monday">The Twelve-Factor Container</a> (<a href="https://www.youtube.com/watch?v=aPv12drmIqg">video</a>) and <a href="http://lcabythebay.org.au/schedule/30389/view_talk?day=monday">Cloud Anti-Patterns</a> (<a href="https://www.youtube.com/watch?v=fV3epaFUEmk">video</a>), Steven Ellis, <a href="http://lcabythebay.org.au/schedule/30390/view_talk?day=monday">Cloud Crafting-Public/Private/Hybird</a> (<a href="https://www.youtube.com/watch?v=WQ7eU2mVL0o">video</a>).</p>
+
+<p>On Tuesday, first I join the keynote of George Fong (<a href="https://www.youtube.com/watch?v=5E589-0kK20">video</a>), and following sessions is my like today: Steven Ellis, <a href="http://lcabythebay.org.au/schedule/30326/view_talk?day=tuesday">Is that a data-center in your pocket?</a> (<a href="https://www.youtube.com/watch?v=4ZnvjJSmbO4">video</a>) , Joe Gordon, <a href="http://lcabythebay.org.au/schedule/30329/view_talk?day=tuesday">Keeping Pinterest Running</a> (<a href="https://www.youtube.com/watch?v=I68LtSfzofg">video</a>),  Tammy Butow, <a href="http://lcabythebay.org.au/schedule/30330/view_talk?day=tuesday">Site Reliability Engineering at DropBox</a> (<a href="https://www.youtube.com/watch?v=ggizCjUCCqE">video</a>).  And my US manager’s session, <a href="http://lcabythebay.org.au/schedule/30354/view_talk?day=tuesday">Internet Archive: Universal Access. Open APIs</a> (<a href="https://www.youtube.com/watch?v=FHkp3KRisAQ">video</a>) <em>by</em> VM Brasseur. And on Tuesday night I join the Professional Delegates’ Networking Session (PDNS)  at <em>Little Creatures Brewery, South Geelong.</em> Beers and kangaroo meat are all my favorite.</p>
+
+<p><img src="images/iphone6Sd_20160222-386-225x300.jpg" alt="iphone6Sd_20160222 386" /></p>
+
+<p>Wednesday also started with the keynote by Catarina Mota (<a href="https://www.youtube.com/watch?v=CpYsrpnDtsE">video</a>), today’s session is <a href="http://lcabythebay.org.au/schedule/30210/view_talk?day=wednesday">Welcoming Everyone: Five Years of Inclusion and Outreach Programmes at PyCon Australia</a> <em>by</em> Christopher Neugebauer. And Wednesday night was the Penguin Dinner, which is the major, all attendees welcome conference dinner of the event. The venue was The Pier, which was a restaurant appropriately perched on the end of a very long pier.</p>
+
+<p><img src="images/iphone6Sd_20160222-441-300x225.jpg" alt="iphone6Sd_20160222 441" /></p>
+
+<p>Thursday’s keynote is by Jono Bacon (<a href="https://www.youtube.com/watch?v=LToxpzWcMxc">video</a>), and today I joined my HPE college Elizabeth K. Joseph’s session, <a href="http://lcabythebay.org.au/schedule/30122/view_talk?day=thursday">Open Source Tools for Distributed Systems Administration</a> (<a href="https://www.youtube.com/watch?v=yu0PFfbldNU">video</a>, <a href="http://princessleia.com/presentations/2016/lca2016-tools-for-open-source-sysadmin.pdf">slides</a>).</p>
+
+<p><a href="http://princessleia.com/images/journalpics/022016/lca2016_lyz_talk.jpg"><img src="images/lca2016_lyz_talk_sm.jpg" alt="" /></a> Photo by Masayuki Igawa (<a href="https://www.flickr.com/photos/masayun/24900498966/">source</a>)</p>
+
+<p>The last day of this week is started with keynote by Genevieve Bell (<a href="https://www.youtube.com/watch?v=QqADuKyBNMc">video</a>), an Intel fellow with a background in cultural anthropology. The last day ended with the Lightning Talks and Conference Closing that included raffle prizes, thanks to everyone and the hand-off to the team running LCA 2017 in Hobart next year.</p>
+
+<p>This is my first trip for LCA, it’s great conference I have joined, it’s wonderful experience, I hope I can come in next year!</p>]]></content><author><name></name></author><category term="travel" /><summary type="html"><![CDATA[2016.2.1 ~ 2016.2.5, i had the pleasure of attending my first linux.conf.au. This year it took place in Geelong, a very beautiful, small, seaside city, about an hour train ride southwest of Melbourne. I arrived Melbourne on Sunday(1.31) afternoon and took the shuttle bus from Melbourne airport to the conference venue at Deakin University’s Waterfront Campus, after finished the registration and got my badge, then I walked to my hotel along the very beautiful beach.]]></summary></entry><entry><title type="html">Mitaka OpenStack Summit at Tokyo</title><link href="http://localhost:4000/openstack/travel/2015/12/11/mitaka-openstack-summit-at-tokyo.html" rel="alternate" type="text/html" title="Mitaka OpenStack Summit at Tokyo" /><published>2015-12-11T00:00:00+08:00</published><updated>2015-12-11T00:00:00+08:00</updated><id>http://localhost:4000/openstack/travel/2015/12/11/mitaka-openstack-summit-at-tokyo</id><content type="html" xml:base="http://localhost:4000/openstack/travel/2015/12/11/mitaka-openstack-summit-at-tokyo.html"><![CDATA[<p><strong>Day 1</strong></p>
+
+<p>It’s been more than a year to attend Mitaka OpenStack Summit at Tokyo, it’s my second OpenStack Summit, it’s my first travel after join the new team and it’s my first time to visit Tokyo. For Mitaka, the OpenStack Summit is only 4 days long, lasting from Tuesday through Friday. I arrived Tokyo Haneda Airport at the Monday afternoon (2015.10.26) with 3 hours flight from Beijing, then took the keikyu line railway to arrive Shinagawa Station, after about 10 mins walking got to my hotel and OpenStack Summit venue. (Grand Prince Hotel New Takanawa)<img src="images/iphone5_20151103-032-225x300.jpg" alt="Grand Prince Hotel New Takanawa" /></p>
+
+<p>After a little rest, I walked over to the HP employee party at a nearby restaurant where I saw my boss first time.</p>
+
+<p>Tuesday was the actual start of the summit. There about 5,000 attendees from 56 countries attend this summit, which makes it the biggest non-North American summit. I attended the keynotes today (all of which are in the video here: <a href="https://www.youtube.com/watch?v=fnPj9pQc2L8">OpenStack Tokyo Summit Full Keynote</a>). It continues to be inspiring to watch such diverse companies embracing not only the usage of open source and OpenStack, but the contributions back to the community. Jonathan Bryce also talked about the cool new feature on the OpenStack website that takes various metrics and creates a table tracking age, maturity and adoption to help operators evaluate each component, it can be found at: <a href="http://www.openstack.org/software/project-navigator">http://www.openstack.org/software/project-navigator</a>. He also announced an OpenStack certification that was built and developed with some of the training partners and will start being available to take in 2016.</p>
+
+<p><img src="images/iphone5_20151103-064-300x225.jpg" alt="keynote" /></p>
+
+<p>The rest of this day i attended many OpenStack sessions related Infrastructure.</p>
+
+<p><strong>Day2</strong></p>
+
+<p>The opening keynotes on Wednesday had a pretty common theme: Neutron. Mark Collier shared that in the Liberty cycle, for the first time Neutron was the most active project in OpenStack. This is really inspiring news for the community, as just two years ago there was concern about the commitment to the project and adoption statistics. Mark went on to share that 89% of respondents to the latest OpenStack User Survey said they’re using Neutron in production. Keynotes continued with former Neutron PTL Kyle Mestery who gave a quick history of Neutron, spoke about design goals and new <a href="https://git.openstack.org/cgit/openstack/kuryr/tree/">Kuryr</a> project, which focuses on networking for containers. Full video of the keynotes <a href="https://www.youtube.com/watch?v=D4FEBdqfaZg">here</a>.<img src="images/keynote-300x200.jpg" alt="keynote" /></p>
+
+<p>Today I also join the QA session about the new health dashboard to track problems and failures in our CI system so they can be checked by anyone when a disruption occurs. An initial prototype has been launched, so the discussion centered around the future of scaling the dashboard so it can be introduced to the wider community. This included concerns like backups and bottlenecks like subunit2sql performance fixes. Read-only link to the Etherpad from the session <a href="https://etherpad.openstack.org/p/r.014a73fa8b4864e6bba31556c77f42a2">here</a>.</p>
+
+<p>The official evening party was hold by HP, Scality, Cisco and Bit-isle and took place at the beautiful <a href="http://www.happo-en.com/english/">Happo-En</a> park. It was a shuttle ride or a 10 minute walk from the venue. The event had several indoor spaces with refreshments and entertainment. It also had a beautiful outdoor space, with a park to walk through, water features, bridges, and a whole fleet of bonsai trees, one of which was 520 years old.</p>
+
+<p><img src="images/party-300x200.jpg" alt="party" /></p>
+
+<p><strong>Day3 and Day4</strong></p>
+
+<p>I spent the Thursday and Friday focus on the Design Summit and Team meetup. This is my first time to join the design summit.</p>
+
+<p>Also sent a postcard with the Japanese character at the HP lounge.</p>
+
+<p><img src="images/iphone5_20151103-146-300x225.jpg" alt="iphone5_20151103 146" /></p>
+
+<p>For lunch I met up with my HP colleagues as we secured two tables in the hot buffet lunch area, It’s my first time to meet the whole team and put the IRC nick to a face in several cases.</p>
+
+<p>Friday was contributor meetup day! I would like to join the Infrastructure session but full house.</p>
+
+<p>That’s all my Mikata OpenStack Summit!</p>]]></content><author><name></name></author><category term="openstack" /><category term="travel" /><summary type="html"><![CDATA[Day 1]]></summary></entry></feed>

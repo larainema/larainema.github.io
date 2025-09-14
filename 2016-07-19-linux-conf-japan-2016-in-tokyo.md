@@ -1,0 +1,30 @@
+---
+title: "Linux Conf Japan 2016 in Tokyo"
+date: 2016-07-19
+categories: 
+  - "travel"
+---
+
+This year I have submitted a topic to the Linux conf japan, and this talk have been accepted by the conference, so I made my second trip for Tokyo. This year's Linux conf japan took place at the hotel chinzanso a very beautiful garden hotel in Tokyo.
+
+I arrived Tokyo on the Tuesday July 12th, i am very happy my flight upgrade to the business class by free, so that make me more relax on the flight. After arrived I toke the train and subway to the hotel, and with the long walk/climb to the hotel, picture took at the hotel room.
+
+![iphone6Sd_20160730 032](images/iphone6Sd_20160730-032-300x225.jpg)
+
+Conference began on Wednesday July 13th, and I got my conf badge and speaker gift with a long queue in the morning. Conference started with the keynote by Jim Zemlin, Executive Director at the Linux Foundation and a bunch of keynotes in the morning.
+
+![iphone6Sd_20160730 047](images/iphone6Sd_20160730-047-225x300.jpg)
+
+![iphone6Sd_20160730 048](images/iphone6Sd_20160730-048-300x225.jpg)
+
+Have great lunch with my colleges Matthew and Masayukig and join their session in the afternoon to talk about the Best Testing through statistics, This talk explain the basics of OpenStack's CI infra and cover the approach and tooling used by the OpenStack community to interact with the large amount of test result. It explain the techniques used and the benefits derived from having both open test result data and performing analysis on that data to understand the project.
+
+![iphone6Sd_20160730 062](images/iphone6Sd_20160730-062-300x225.jpg)
+
+The second day I enjoyed the keynote conversion session between Linus Torvalds the Linux creator and Dirk Hohndel the chief open source officer of VMware to talk about the Linux. What more exciting for me is I took a picture with Linus after the keynote. Yeah!
+
+![iphone6Sd_20160730 076](images/iphone6Sd_20160730-076-300x225.jpg)
+
+This afternoon, I gave a talk this afternoon to talk about the continuous integration and continuous delivery of open source project. This is my first time to talk at Linux conf japan and got a good feedback about my session. Also this night I have a great dinner with the NEC guys and OpenStack colleges.
+
+The third day is the close day of Linux conf japan, it's great honor to join and talk at Linux conf japan, met many good friends here, I hope I can join in the next year!
